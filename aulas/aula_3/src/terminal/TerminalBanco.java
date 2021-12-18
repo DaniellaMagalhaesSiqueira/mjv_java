@@ -1,6 +1,5 @@
 package terminal;
 
-import java.util.Scanner;
 
 public class TerminalBanco {
 
