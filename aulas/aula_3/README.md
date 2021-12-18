@@ -1,6 +1,6 @@
 ## Aula 3:
-- Código gerado na atividade em grupo:
-...
+- Código gerado na atividade em grupo.
+```
 programa {
 funcao inicio() {
         real saldoAtual = 10.0
@@ -37,4 +37,4 @@ funcao inicio() {
           escreva("Seu cheque especial é de ", chequeEspecial)
 }
 }
-...
+```
