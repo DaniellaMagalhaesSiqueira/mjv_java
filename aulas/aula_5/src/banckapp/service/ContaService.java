@@ -13,8 +13,8 @@ public class ContaService {
 			return;
 		}else {
 			if(conta.getSaldo() < valorSacado) {
-				conta.setSaldo(0.0);
 				conta.setChequeEspecial(conta.getSaldo() + conta.getChequeEspecial() - valorSacado);
+				conta.setSaldo(0.0);
 			}else {
 				
 				conta.setSaldo(conta.getSaldo() - valorSacado);
@@ -28,8 +28,8 @@ public class ContaService {
 			return;
 		}else {
 			if(depositante.getSaldo() < valorTransferido) {
-				depositante.setSaldo(0.0);
 				depositante.setChequeEspecial(depositante.getSaldo() + depositante.getChequeEspecial() - valorTransferido);
+				depositante.setSaldo(0.0);
 				this.depositar(depositada, valorTransferido);
 			}else {
 				depositante.setSaldo(depositante.getSaldo() - valorTransferido);
@@ -37,5 +37,9 @@ public class ContaService {
 			}
 		}
 		
+	}
+	
+	public void criarChequeEspecial(Conta conta, double valorLimite) {
+		conta.setChequeEspecial(valorLimite);
 	}
 }

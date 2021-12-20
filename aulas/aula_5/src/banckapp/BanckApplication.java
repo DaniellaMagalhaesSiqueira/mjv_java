@@ -14,9 +14,11 @@ public class BanckApplication {
 		
 		terminal.depositar(conta1, 50.0);
 		terminal.transferir(conta1, conta2, 30.0);
+		terminal.criarChequeEspecial(conta2, 20.0);
 		terminal.sacar(conta2, 40.0);
 		System.out.println(conta1.getSaldo());
 		System.out.println(conta2.getSaldo());
+		System.out.println(conta2.getChequeEspecial());
 		
 
 	}
