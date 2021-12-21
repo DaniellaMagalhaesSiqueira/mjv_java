@@ -1,11 +1,13 @@
 package banckapp.service;
 
 import banckapp.model.Conta;
+import banckapp.model.Historico;
 
 public class ContaService {
 //2 a 3 recursos
 	public void depositar(Conta conta, double valorDepositado) {
-		conta.setSaldo(valorDepositado);
+		conta.setSaldo(valorDepositado + conta.getSaldo());
+		conta.getHistorico().add(new Historico("20/12", valorDepositado, "Depósito"));
 	}
 	public void sacar(Conta conta, double valorSacado) {
 		if(valorSacado > conta.getSaldo() + conta.getChequeEspecial()) {
@@ -41,5 +43,14 @@ public class ContaService {
 	
 	public void criarChequeEspecial(Conta conta, double valorLimite) {
 		conta.setChequeEspecial(valorLimite);
+	}
+	
+	public void exibirExtrato(Conta conta) {
+		System.out.println("Exibindo Histórico");
+		for(Historico hst: conta.getHistorico()) {
+			System.out.println(hst.getData()
+					+ hst.getTipoOperacao()
+					+ hst.getValor());
+		}
 	}
 }

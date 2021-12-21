@@ -1,4 +1,8 @@
 package banckapp.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //poo
 //modificadores de acesso
 //padrão java beans
@@ -11,6 +15,7 @@ public class Conta {
 	private int numero;
 	private double chequeEspecial;
 	private String tipo;
+	private List <Historico> historico = new ArrayList<>();
 	
 	
 	public void setNumero(int numero) {
@@ -39,6 +44,14 @@ public class Conta {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	public List<Historico> getHistorico() {
+		return historico;
+	}
+	public void setHistorico(List<Historico> historico) {
+		this.historico = historico;
+	}
+
+	
 	
 	
 	
