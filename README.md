@@ -26,6 +26,6 @@
 - depuração com a ferramenta eclipse
 - atalhos para a produtividade de códigos > método get digita get + a primeira letra do atributo maíuscula e aperta ctrl + space para autocompletar
 - atalhos para a produtividade de códigos > na guia source escolha Generate getters and setters
-- Criação de 2 a 3 atributos para a classe Conta [Conta model](/aulas/aula_5/src/banckapp/model/Conta) > atividade em grupo
-- Criação de 2 a 3 recursos para a classe ContaService [ContaService service](/aulas/aula_5/src/banckapp/service/ContaService) > atividade em grupo
-- Criação de 2 a 3 objetos ou contas de integrantes para teste da model e da service [BanckApplication](/aulas/aula_5/src/banckapp/BanckApplication) > atividade em grupo
+- Criação de 2 a 3 atributos para a classe Conta [Conta model](/aulas/aula_5/src/banckapp/model/Conta.java) > atividade em grupo
+- Criação de 2 a 3 recursos para a classe ContaService [ContaService service](/aulas/aula_5/src/banckapp/service/ContaService.java) > atividade em grupo
+- Criação de 2 a 3 objetos ou contas de integrantes para teste da model e da service [BanckApplication](/aulas/aula_5/src/banckapp/BanckApplication.java) > atividade em grupo
