@@ -29,3 +29,10 @@
 - Criação de 2 a 3 atributos para a classe Conta [Conta model](/aulas/aula_5/src/banckapp/model/Conta.java) > atividade em grupo
 - Criação de 2 a 3 recursos para a classe ContaService [ContaService service](/aulas/aula_5/src/banckapp/service/ContaService.java) > atividade em grupo
 - Criação de 2 a 3 objetos ou contas de integrantes para teste da model e da service [BanckApplication](/aulas/aula_5/src/banckapp/BanckApplication.java) > atividade em grupo
+
+## Aula 6:
+- Conceito de arrays e sua estrutura, bem como acesso à variável length para inserir nas estruturas de controle
+- Conceito de arquivos repositórios -> [Conta Repository]("/aulas/aula_5/src/repository/ContaRepository.java").
+- Conceito de Collections
+- Atividade em grupo (grupo 5) <https://github.com/digytal-code/java-code/tree/main/challenge/power-classes>, criação de arquivo para teste da classe File [MainArquivo]("/aulas/aula_6/src/desafio/MainArquivo.java")
+

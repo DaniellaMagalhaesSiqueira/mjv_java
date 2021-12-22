@@ -12,16 +12,17 @@ import java.util.List;
 public class Conta {
 //2 a 3 atributos
 	private double saldo;
-	private int numero;
+	private String numero;
 	private double chequeEspecial;
+	private String nomeCorrentista;
 	private String tipo;
 	private List <Historico> historico = new ArrayList<>();
 	
 	
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
