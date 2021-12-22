@@ -32,7 +32,7 @@
 
 ## Aula 6:
 - Conceito de arrays e sua estrutura, bem como acesso à variável length para inserir nas estruturas de controle
-- Conceito de arquivos repositórios -> [Conta Repository]("/aulas/aula_5/src/repository/ContaRepository.java").
+- Conceito de arquivos repositórios -> [Conta Repository]("aulas/aula_5/src/repository/ContaRepository.java").
 - Conceito de Collections
 - Atividade em grupo (grupo 5) <https://github.com/digytal-code/java-code/tree/main/challenge/power-classes>, criação de arquivo para teste da classe File [MainArquivo]("/aulas/aula_6/src/desafio/MainArquivo.java")
 
