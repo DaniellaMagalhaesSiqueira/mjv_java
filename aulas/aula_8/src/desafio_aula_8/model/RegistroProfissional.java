@@ -10,6 +10,7 @@ public class RegistroProfissional {
 	
 	private String cpf;
 	private LocalDate dataNascimento;
+	private String nome;
 	private Sexo sexo;
 	private Escolaridade escolaridade;
 	private String profissao;
@@ -17,6 +18,7 @@ public class RegistroProfissional {
 	private Double salarioMaximo;
 	private String telefone;
 	private boolean estrangeiro;
+	
 	public String getCpf() {
 		return cpf;
 	}
@@ -28,6 +30,13 @@ public class RegistroProfissional {
 	}
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public Sexo getSexo() {
 		return sexo;
@@ -70,6 +79,13 @@ public class RegistroProfissional {
 	}
 	public void setEstrangeiro(boolean estrangeiro) {
 		this.estrangeiro = estrangeiro;
+	}
+	@Override
+	public String toString() {
+		return "RegistroProfissional [cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", nome=" + nome + ", sexo="
+				+ sexo + ", escolaridade=" + escolaridade + ", profissao=" + profissao + ", salarioMinimo="
+				+ salarioMinimo + ", salarioMaximo=" + salarioMaximo + ", telefone=" + telefone + ", estrangeiro="
+				+ estrangeiro + "]";
 	}
 	
 	

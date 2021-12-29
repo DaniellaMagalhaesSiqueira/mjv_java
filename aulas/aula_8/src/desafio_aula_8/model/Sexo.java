@@ -2,8 +2,8 @@ package desafio_aula_8.model;
 
 public enum Sexo {
 
-	M ("Masculino"),
-	F ("Feminino");
+	M ("MASCULINO"),
+	F ("FEMININO");
 	
 	private String nome;
 	private Sexo(String nome) {
