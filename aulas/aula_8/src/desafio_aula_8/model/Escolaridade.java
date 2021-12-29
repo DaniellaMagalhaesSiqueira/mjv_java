@@ -1,10 +1,16 @@
 package desafio_aula_8.model;
 
 public enum Escolaridade {
-
-	FUND("FUNDAMENTAL"), 
-	MED("MÉDIO"), 
-	SUP("SUPERIOR");
+	A ("Analfabeto"),
+	LE("Lê e Escreve"),
+	FUND_INC("Fundamental Incompleto"), 
+	FUND("Ensino Fundamental"), 
+	MED_INC("Ensino Médio Incompleto"), 
+	MED("Ensino Médio Completo"), 
+	SUP("Superior"),
+	MESTR("Mestrado"),
+	DOUT("Doutorado");
+	
 	
 	private String nome;
 	

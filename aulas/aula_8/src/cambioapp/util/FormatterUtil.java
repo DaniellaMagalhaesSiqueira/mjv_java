@@ -2,6 +2,7 @@ package cambioapp.util;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -28,7 +29,7 @@ public class FormatterUtil {
 		return cpfFormatado;
 	}
 	
-	public static String data(LocalDateTime data) {
+	public static String data(LocalDate data) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return data.format(formatter);
 	}
@@ -36,4 +37,6 @@ public class FormatterUtil {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh.mm.ss");
 		return hora.format(formatter);
 	}
+	
+
 }

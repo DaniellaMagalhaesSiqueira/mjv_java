@@ -33,4 +33,24 @@ public class FormatterUtil {
 		return LocalDate.parse(data, formatter);
 
 	}
+	
+	public static String data(LocalDate data) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		return data.format(formatter);
+	}
+	public static String virgula(Double valor) {
+		StringBuilder valorStr = new StringBuilder();
+		valorStr.append(valor);
+		valorStr.replace(4,5, ",");
+		return valorStr.toString();
+	}
+	
+	public static String telefone(String tel) {
+		StringBuilder telefone = new StringBuilder();
+		telefone.append("(");
+		telefone.append(tel);
+		telefone.insert(3, ")");
+		telefone.insert(9, "-");
+		return telefone.toString();
+	}
 }

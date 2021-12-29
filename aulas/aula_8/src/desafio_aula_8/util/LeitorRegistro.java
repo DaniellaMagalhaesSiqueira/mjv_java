@@ -40,6 +40,7 @@ public class LeitorRegistro {
 			String [] campos = linha.split(";"); 
 			RegistroProfissional rp = new RegistroProfissional();
 			rp.setCpf(campos[0]);
+			//Classe FormatterUtil adaptada para não precisar criar formatadores aqui
 			String data = campos[1];
 			rp.setDataNascimento(FormatterUtil.converterData(data));
 			rp.setNome(campos[2]);
