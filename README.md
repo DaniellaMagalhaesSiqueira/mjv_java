@@ -36,3 +36,10 @@
 - Conceito de Collections
 - Atividade em grupo (grupo 5) <https://github.com/digytal-code/java-code/tree/main/challenge/power-classes>, criação de arquivo para teste da classe File [MainArquivo](/aulas/aula_6/src/desafio/MainArquivo.java)
 
+## Aula 7: 
+Apresentação de grupos
+
+## Aula 8:
+
+Arquivo README da aula 8 [README.md](/aulas/aula_8/README.md)
+
