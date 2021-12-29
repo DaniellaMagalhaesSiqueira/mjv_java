@@ -23,6 +23,6 @@ public class RegistroProfissionalApp {
 		
 		String saida = layout.criar(registros.get(0));
 		FabricaArquivo.criarRegistro(registros.get(0),"D:\\PROJETOS\\MJV_JAVA\\aulas\\aula_8\\src\\");
-//		System.out.println(saida);
+		System.out.println(saida);
 	}
 }

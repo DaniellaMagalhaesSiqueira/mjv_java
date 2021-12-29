@@ -53,4 +53,11 @@ public class FormatterUtil {
 		telefone.insert(9, "-");
 		return telefone.toString();
 	}
+	
+	public static String cep(String cep) {
+		StringBuilder cepFormat = new StringBuilder();
+		cepFormat.append(cep);
+		cepFormat.insert(4, "-");
+		return cepFormat.toString();
+	}
 }

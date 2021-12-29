@@ -14,25 +14,39 @@ public class FabricaArquivo {
 		
 		File diretorio = new File(caminho);
 		
-		File arquivo = new File(diretorio.getAbsolutePath() + "/" + rp.getCpf() + ".txt");
-		
-		
-		try {
-			
-			arquivo.createNewFile();
-			
-			FileWriter arqTxt = new FileWriter(arquivo.getPath());
-			
-			String ficha = layout.criar(rp);
-			arqTxt.write(ficha);
-			arqTxt.close();
-			System.out.println(String.format("%s%s%s", "Arquivo de ",rp.getNome(), " criado com sucesso!"));
-			System.out.println("Encontre o arquivo no diretório informado com o formato CPF.txt");
-			
-		} catch (IOException e) {
-			
-			e.printStackTrace();
+		if(new File(diretorio.getAbsolutePath() + "/" + rp.getCpf() + ".txt").exists()) {			
+			File arquivo = new File(diretorio.getAbsolutePath() + "/" + rp.getCpf() + ".txt");
+			try {
+				
+				FileWriter arqTxt = new FileWriter(arquivo.getPath());
+				String ficha = layout.criar(rp);
+				arqTxt.write(ficha);
+				arqTxt.close();
+				System.out.println(String.format("%s%s%s", "Arquivo de ",rp.getNome(), " criado com sucesso!"));
+				System.out.println("Encontre o arquivo no diretório informado com o formato CPF.txt");
+				
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}else {
+			File arquivo = new File(diretorio.getAbsolutePath() + "/" + rp.getCpf() + ".txt");
+			try {
+				arquivo.createNewFile();				
+				FileWriter arqTxt = new FileWriter(arquivo.getPath());		
+				String ficha = layout.criar(rp);
+				arqTxt.write(ficha);
+				arqTxt.close();
+				System.out.println(String.format("%s%s%s", "Arquivo de ",rp.getNome(), " criado com sucesso!"));
+				System.out.println("Encontre o arquivo no diretório informado com o formato CPF.txt");
+				
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
 		}
+		
+		
 		
 	}
 }

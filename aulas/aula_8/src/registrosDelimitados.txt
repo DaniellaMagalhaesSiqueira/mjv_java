@@ -1,3 +1,3 @@
-08681014781;19801028;Daniella Magalhães Siqueira;F;SUP;Tecnólogo em Sistemas da Computação;3000.00;5000.00;22998741569;0
-95455856784;20050315;Anderson Nunes Alencar;M;MED;Estudante;2500.00;4000.00;21985654785;0
-55456255687;20030619;Rosário Almeida;F;SUP;Advogada;4000.00;6000.00;48998654875;1
+08681014781;19801028;Daniella Magalhães Siqueira;F;SUP;Tecnólogo em Sistemas da Computação;3000.00;5000.00;22275741569;0;125414144;22998741569;Rua Sidney Vasconcelos Aguiar;1047;Glória;Macaé;RJ;27932010;São Gonçalo, Rio de Janeiro;Brasil;daniella.siqueira80@gmail.com
+95455856784;20050315;Anderson Nunes Alencar;M;MED;Estudante;2500.00;4000.00;21274654785;0;125697855;21985654785;Rua Rio Branco;456;bairro;cidade;SP;27945655;naturalidade;Brasil;antonio@emai.com
+55456255687;20030619;Rosário Almeida;F;SUP;Advogada;4000.00;6000.00;48277854875;1;565598233;48998654875;Rua Almirante Antonio;2000;bairro;cidade;SP;27945699;naturalidade;Portugal;rosario@emai.com

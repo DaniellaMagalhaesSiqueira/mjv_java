@@ -1,11 +1,9 @@
-PROFISSÃO: Tecnólogo em Sistemas da Computação
-Nome: Daniella Magalhães Siqueira
+Tecnólogo em Sistemas da ComputaçãoNome: Daniella Magalhães Siqueira
 Salário Requerido: Mínimo: R$ 3000,0  Máximo: R$ 5000,0
-Data de Nasc.: 28/10/1980 CPF: 086.810.147-81 RG: _________________
-Endereço: _________________________________________________________
-Nº: _____ Bairro: _______________ Município: ______________ UF: ___
-Cep: ______________ Naturalidade: __________________ País: ________
-Telefone:(22)99874-1569  Celular: ____________________
-E-mail: ___________________________________________________________
-Grau de Instrução: 
-Superior
+Data de Nasc.: 28/10/1980 CPF: 086.810.147-81 RG:125414144
+Endereço: Rua Sidney Vasconcelos Aguiar
+Nº: 1047 Bairro: Glória Município: MacaéUF:RJ
+Cep: 2793-2010 Naturalidade: São Gonçalo, Rio de Janeiro País: Brasil
+Telefone:  (22)27574-1569 Celular:  (22)99874-1569
+E-mail: daniella.siqueira80@gmail.com
+Grau de Instrução: Superior

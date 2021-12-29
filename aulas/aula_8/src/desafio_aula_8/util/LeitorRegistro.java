@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import desafio_aula_8.model.Escolaridade;
+import desafio_aula_8.model.Estado;
 import desafio_aula_8.model.RegistroProfissional;
 import desafio_aula_8.model.Sexo;
 
@@ -52,7 +53,17 @@ public class LeitorRegistro {
 			rp.setTelefone(campos[8]);
 			int estrangeiro = Integer.parseInt(campos[9]);
 			rp.setEstrangeiro(estrangeiro == 1 ? true : false);
-			
+			rp.setRg(campos[10]);
+			rp.setCelular(campos[11]);
+			rp.setEndereco(campos[12]);
+			rp.setNumero(Integer.parseInt(campos[13]));
+			rp.setBairro(campos[14]);
+			rp.setMunicipio(campos[15]);
+			rp.setUf(campos[16]);
+			rp.setCep(campos[17]);
+			rp.setNaturalidade(campos[18]);
+			rp.setPais(campos[19]);
+			rp.setEmail(campos[20]);
 			registros.add(rp);
 		}
 		return registros;
