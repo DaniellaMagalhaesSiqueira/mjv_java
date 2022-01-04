@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import desafio_aula_8.model.Escolaridade;
-import desafio_aula_8.model.Estado;
 import desafio_aula_8.model.RegistroProfissional;
 import desafio_aula_8.model.Sexo;
 
@@ -32,13 +31,13 @@ public class LeitorRegistro {
 //	Cpf, Data Nascimento, Nome, Sexo, Escolaridade, Profissão, Salário (Mínimo/Máximo) 
 //	Pretendido,Telefone para contato (DDD+numero) e Estrangeiro;
 	
-	public List<RegistroProfissional> converter(String caminho){
+	public List<RegistroProfissional> converter(String caminho, String delimitador){
 		List<String> linhas = ler(caminho);
 		
 		List <RegistroProfissional> registros = new ArrayList<>();
 		for(String linha: linhas) {
 			//poderia ser qualquer delimitador, por exemplo "/", " ", ":"
-			String [] campos = linha.split(";"); 
+			String [] campos = linha.split(delimitador); 
 			RegistroProfissional rp = new RegistroProfissional();
 			rp.setCpf(campos[0]);
 			//Classe FormatterUtil adaptada para não precisar criar formatadores aqui
@@ -66,6 +65,16 @@ public class LeitorRegistro {
 			rp.setEmail(campos[20]);
 			registros.add(rp);
 		}
+		return registros;
+	}
+	public List<RegistroProfissional> converter(String caminho){ 
+		RegistroProfissional rp = new RegistroProfissional();
+		List<String> linhas = ler(caminho);
+		List <RegistroProfissional> registros = new ArrayList<>();
+		for(String linha: linhas) {
+			
+		}
+		
 		return registros;
 	}
 }

@@ -13,12 +13,12 @@ public class RegistroProfissionalApp {
 		
 		LeitorRegistro leitor = new LeitorRegistro();
 		
-		List<RegistroProfissional> registros = 
-			leitor.converter("D:\\PROJETOS\\MJV_JAVA\\aulas\\aula_8\\src\\registrosDelimitados.txt");
-//		
+		List<RegistroProfissional> registros = leitor.converter("D:\\PROJETOS\\MJV_JAVA\\aulas\\aula_8\\src\\registrosDelimitados.txt", ";");
+		
 //		for(RegistroProfissional rp: registros) {
 //			System.out.println(rp);
 //		}
+		
 		LayoutRegistroProfissional layout = new LayoutRegistroProfissional();
 		
 		String saida = layout.criar(registros.get(0));
