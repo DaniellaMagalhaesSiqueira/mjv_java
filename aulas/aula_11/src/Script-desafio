@@ -1,0 +1,106 @@
+
+--DDL - Data Definition Language (Linguagem de Definição de dados)
+--CREATE, ALTER e DROP
+
+--DML - Data Manipulation Language (Linguagem de Manipulação de Dados)
+--INSERT, UPDATE e DELETE
+
+--DQL - Data Query Language - Linguagem de consulta de dados
+--SELECT
+
+create database desafio;
+
+--mudar o banco default para desafio
+
+create table tab_ficha_profissional(
+	id serial primary key,
+	nome varchar(50),
+	email varchar(50),
+	--considerando o código do país + DDD + parêntes e traço
+	telefone varchar(18),
+	logradouro varchar(100),
+	numero varchar(5),
+	bairro varchar(50),
+	cidade varchar(80),
+	estado char(2),
+	-- no postegres é usado o numeric
+	-- no mysql é usado o decimal
+	salario_minimo numeric(8,2),
+	salario_maximo numeric(8,2),
+	estrangeiro char(1)
+);
+
+
+insert into tab_ficha_profissional values( 
+-- o valor do id é autoincrement, portanto usamos default
+default,
+'Daniella M. Siqueira', 'daniella@gmail.com', '55022998741569', 'Rua Rio Branco', '1567',
+'Centro', 'Macaé', 'RJ', 2567.80, 5000.0, '0'
+);
+-- inserindo estrangeiro para mostrar a exclusão
+insert into tab_ficha_profissional values( 
+default,
+'Joaquim de Oliveira', 'quim@gmail.com', '35122998741569', 'Rua Rio Branco', '1567',
+'Centro', 'Portugal', 'LB', 2567.80, 5000.0, '1'
+);
+-- inserindo outro registro para entrar no id 3
+insert into tab_ficha_profissional values( 
+default,
+'Registro de id 3', 't@gmail.com', '55022998741569', 'Rua Rio Branco', '1567',
+'Centro', 'Macaé', 'RJ', 1000.80, 5000.0, '0', 'teste profissão'
+);
+
+insert into tab_ficha_profissional values( 
+default,
+'MARCOS PAULO BRITO', 'marcosPbritoS@gmail.com', '55022998741569', 'Rua Rio Branco', '1567',
+'Centro', 'Rio de Janeiro', 'RJ', 1000.80, 2000.0, '0', 'Designer Gráfico'
+);
+
+
+alter table tab_ficha_profissional add column profissao varchar(50);
+
+alter table tab_ficha_profissional alter column email type varchar(100);
+
+update tab_ficha_profissional set profissao = 'Desenvolvedora de Sistemas' where id = 1;
+
+update tab_ficha_profissional set email = 'daniella.siqueira80@gmail.com' where id = 1;
+
+update tab_ficha_profissional set logradouro = 'PRACA DA SE', numero = 'S/N', bairro = 'CENTRO',
+cidade = 'SAO PAULO' where id = 3;
+
+delete from tab_ficha_profissional where estrangeiro = '1';
+
+select * from tab_ficha_profissional;
+
+select nome, email, profissao, salario_minimo, salario_maximo from tab_ficha_profissional
+order by  profissao, nome;
+
+select nome, email, profissao, salario_minimo, salario_maximo from tab_ficha_profissional
+order by profissao, salario_maximo desc;
+
+select nome || ' - ' || profissao as nome_profissao from tab_ficha_profissional;
+
+-- necessário o group by, retorna um erro
+select profissao, count(profissao) as quantidade from tab_ficha_profissional group by profissao;
+
+
+select min(salario_minimo) as menor_salario from tab_ficha_profissional;
+
+select * from tab_ficha_profissional where
+nome like 'MARCOS PAULO%'
+and salario_maximo > 1200.0
+and salario_maximo <= 2000.0
+and estado = 'RJ' or estado = 'SC' or estado = 'SP';
+
+
+
+
+
+
+
+
+
+
+
+
+

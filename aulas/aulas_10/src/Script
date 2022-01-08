@@ -1,0 +1,39 @@
+
+create table tab_cliente(
+nome varchar(50) not null,
+logradouro varchar(100),
+bairro varchar(100),
+numero varchar(5),
+cpf varchar(12),
+data_nascimento date,
+sexo char(1),
+estrangeiro bpchar(1)
+);
+
+alter table tab_cliente alter column cpf set not null;
+
+insert into tab_cliente(
+nome,
+logradouro,
+bairro,
+numero,
+cpf,
+data_nascimento,
+sexo,
+estrangeiro)
+values ('Glayson', 'Rua Tal', 'bairro', '0887','0890883888', '2021-05-21', 
+'M', '0'
+);
+--DLL - Definição
+create table tab_ficha_cadastral(
+	nome varchar(50) not null,
+	salario_minimo decimal not null
+);
+--DML - Manipulação dos dados em tabela
+insert into public.tab_ficha_cadastral values ('Gleyson Sampaio', 1200.50);
+
+
+-- DQL - Obtendo os dados
+select * from tab_ficha_cadastral;
+
+select nome, salario_minimo from tab_ficha_cadastral where salario_minimo < 1000;
