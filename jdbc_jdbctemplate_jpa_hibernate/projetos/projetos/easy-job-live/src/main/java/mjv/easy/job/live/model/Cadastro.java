@@ -1,27 +1,27 @@
 package mjv.easy.job.live.model;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name = "tab_cadastro")
 public class Cadastro {
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(length=70, nullable=false)
+	@Column(length = 70, nullable = false)
 	private String nome;
 	private LocalDate aniversario;
-
-	
+	/*
+	private Double altura;
+	private boolean estrangeiro;
+	*/
 	public String getNome() {
 		return nome;
 	}
@@ -37,6 +37,6 @@ public class Cadastro {
 	public Integer getId() {
 		return id;
 	}
-
+	
 	
 }

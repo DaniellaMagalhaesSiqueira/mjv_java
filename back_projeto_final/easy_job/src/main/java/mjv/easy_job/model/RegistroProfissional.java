@@ -2,15 +2,16 @@ package mjv.easy_job.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 
@@ -33,8 +34,9 @@ public class RegistroProfissional {
 	@Column(length=50)
 	private String nacionalidade;
 	@Enumerated(EnumType.STRING)
+	@Column()
 	private Sexo sexo;
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="id_endereco_fk", referencedColumnName= "idEndereco")
 	private Endereco idEndereco;
 	@Column(length=15)
@@ -43,9 +45,13 @@ public class RegistroProfissional {
 	private String celular;
 	@Enumerated(EnumType.STRING)
 	private Escolaridade escolaridade;
-	@Column(length=100)
+	
+	@ManyToOne()
+	@JoinColumn()
 	private String profissao;
+	@Column(precision=8, scale=2)
 	private Double salarioMinimo;
+	@Column(columnDefinition="numeric(8,2)")
 	private Double salarioMaximo;
 	private String email;
 	public String getNome() {

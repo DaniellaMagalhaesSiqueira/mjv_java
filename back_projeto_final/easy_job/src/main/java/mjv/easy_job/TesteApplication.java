@@ -1,9 +1,10 @@
 package mjv.easy_job;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
-import mjv.easy_job.repository.RegistroProfissionalRepository;
+import mjv.easy_job.model.RegistroProfissional;
 
+@Component
 public class TesteApplication implements CommandLineRunner{
 //	
 //	@Autowired
@@ -11,7 +12,7 @@ public class TesteApplication implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
+		RegistroProfissional rp = new RegistroProfissional();
 		
 	}
 
